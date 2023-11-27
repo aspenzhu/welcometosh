@@ -1,5 +1,3 @@
-# welcometoshanghai
-为初来上海的外国友人提供有关生活、文化、交通和其他实用信息的指南
 # Welcome to Shanghai
 
 ## Introduction
