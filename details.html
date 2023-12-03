@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanghai Guide - Details</title>
+   <link rel="stylesheet" href="details.css">
+</head>
+<body>
+
+    <nav>
+        <a href="#" onclick="showContent('localFood')">当地美食</a>
+        <a href="#" onclick="showContent('drinkOptions')">去哪喝酒</a>
+        <a href="#" onclick="showContent('orderFood')">叫外卖</a>
+        <!-- 添加其他菜单项和子项 -->
+    </nav>
+
+    <section id="content">
+        <!-- 右侧内容区域，初始为空 -->
+        <h2>欢迎查看上海指南</h2>
+    </section>
+
+    <script>
+        function showContent(category) {
+            var content = '';
+
+            // 根据点击的菜单项显示相应的内容
+            switch (category) {
+                case 'localFood':
+                    content = '<h2>当地美食</h2><p>这里是关于上海当地美食的内容。</p>';
+                    break;
+                case 'drinkOptions':
+                    content = '<h2>去哪喝酒</h2><p>这里是关于上海酒吧和夜生活的内容。</p>';
+                    break;
+                case 'orderFood':
+                    content = '<h2>叫外卖</h2><p>这里是关于上海外卖服务的内容。</p>';
+                    break;
+                // 添加其他菜单项的内容
+            }
+
+            // 将内容显示在右侧区域
+            document.getElementById('content').innerHTML = content;
+        }
+    </script>
+
+</body> 
+</html>
