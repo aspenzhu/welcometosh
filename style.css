@@ -1,3 +1,32 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 160px;
+}
+
+/* 导航右侧水平对齐 */
+.navbar-right{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-link {
+    margin-right: 10px; /* 调整链接之间的间距，根据需要调整 */
+    text-decoration: none;
+    padding: 8px;
+    color: #000000; /* 链接文字颜色，根据需要调整 */
+}
+
+.navbar{
+    background-color: #fff;
+    border: #ff4b4b 1px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 160px;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -19,3 +48,4 @@ button {
     cursor: pointer;
     border-radius: 5px;
 }
+
