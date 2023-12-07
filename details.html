@@ -6,42 +6,81 @@
     <title>Shanghai Guide - Details</title>
    <link rel="stylesheet" href="details.css">
 </head>
+<!-- 顶部导航栏 -->
+<header class="navbar">
+    <div class="navbar-left">
+        <a href="homepage" class="navbar-link">welcome to Shanghai</a>
+    </div>
+    <div class="navbar-right">
+        <a href="aboutme" class="navbar-link">关于我</a>
+        <div class="language-switch">
+            <label for="language">Language:</label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
+    </div>
+</header>
+
+<!-- 正文 -->
 <body>
+    <div class="container">
+        <!-- 左侧边栏 -->
+        <div class="sidebar">
+            <div class="menu-item" id="section1">一级菜单1</div>
+    <div class="sub-menu" id="sub-section1">
+        <div class="menu-item">二级菜单1-1</div>
+        <div class="menu-item">二级菜单1-2</div>
+    </div>
 
-    <nav>
-        <a href="#" onclick="showContent('localFood')">当地美食</a>
-        <a href="#" onclick="showContent('drinkOptions')">去哪喝酒</a>
-        <a href="#" onclick="showContent('orderFood')">叫外卖</a>
-        <!-- 添加其他菜单项和子项 -->
-    </nav>
+    <div class="menu-item" id="section2">一级菜单2</div>
+    <div class="sub-menu" id="sub-section2">
+        <div class="menu-item">二级菜单2-1</div>
+        <div class="menu-item">二级菜单2-2</div>
+    </div>
 
-    <section id="content">
-        <!-- 右侧内容区域，初始为空 -->
-        <h2>欢迎查看上海指南</h2>
-    </section>
+    <div class="menu-item" id="section3">一级菜单3</div>
+    <div class="sub-menu" id="sub-section3">
+        <div class="menu-item">二级菜单3-1</div>
+        <div class="menu-item">二级菜单3-2</div>
+    </div>
+    <!-- 更多一级菜单... -->
+        </div>
+   
+
+    <!-- 右侧内容区域 -->
+    <div class="main-content" id="content">
+    <!-- 初始内容 -->
+    <p>初始内容，选择左侧菜单以查看相应内容。</p>
+    </div>
 
     <script>
-        function showContent(category) {
-            var content = '';
+        // JavaScript 代码
+        document.addEventListener('DOMContentLoaded', function () {
+            // 获取所有菜单项元素
+            var menuItems = document.querySelectorAll('.menu-item');
+    
+            // 获取右侧内容区域
+            var contentArea = document.getElementById('content');
+    
+            // 为每一个菜单项添加点击事件监听器
+            menuItems.forEach(function (menuItem) {
+                menuItem.addEventListener('click', function () {
+                    // 获取点击菜单的对应二级菜单
+                    var subMenu = this.nextElementSibling;
+                    // 切换二级菜单的显示状态
+                if (subMenu.style.display === 'block') {
+                    subMenu.style.display = 'none';
+                } else {
+                    subMenu.style.display = 'block';
+                }
 
-            // 根据点击的菜单项显示相应的内容
-            switch (category) {
-                case 'localFood':
-                    content = '<h2>当地美食</h2><p>这里是关于上海当地美食的内容。</p>';
-                    break;
-                case 'drinkOptions':
-                    content = '<h2>去哪喝酒</h2><p>这里是关于上海酒吧和夜生活的内容。</p>';
-                    break;
-                case 'orderFood':
-                    content = '<h2>叫外卖</h2><p>这里是关于上海外卖服务的内容。</p>';
-                    break;
-                // 添加其他菜单项的内容
-            }
-
-            // 将内容显示在右侧区域
-            document.getElementById('content').innerHTML = content;
-        }
-    </script>
-
+                // 更新右侧内容
+                contentArea.innerHTML = "点击了：" + this.textContent;
+            });
+        });
+    });
+</script>
 </body> 
 </html>
