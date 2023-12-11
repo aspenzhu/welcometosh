@@ -1,0 +1,22 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 8px 20px;
+    
+}
+
+.navbar {
+    background-color: #ebebeb;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

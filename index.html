@@ -2,32 +2,20 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="components/navbar.css"> 
     <title>Welcome to Shanghai</title>
 </head>
+
 <!-- 顶部导航栏 -->
-<header class="navbar">
-    <div class="navbar-left">
-        <a href="homepage" class="navbar-link">welcome to Shanghai</a>
-    </div>
-    <div class="navbar-right">
-        <a href="aboutme" class="navbar-link">关于我</a>
-        <div class="language-switch">
-            <label for="language">Language:</label>
-            <select id="language">
-                <option value="en">English</option>
-                <option value="zh">中文</option>
-            </select>
-        </div>
-    </div>
-</header>
+<object type="text/html" data="components/navbar.html"></object>
 <!-- 正文 -->
 <body>
     <main>
         <h1>Welcome to Shanghai</h1>
         <p>这里是为初来上海的外国友人提供有关生活、文化、交通和其他实用信息的指南。</p>
         <button onclick="redirectToDetails()">开始</button>
+
         <script>
             function redirectToDetails() {
                 window.location.href = 'details.html'; // 这里的 'details.html' 是详情页文件名

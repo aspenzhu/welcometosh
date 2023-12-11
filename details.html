@@ -2,26 +2,12 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shanghai Guide - Details</title>
-   <link rel="stylesheet" href="details.css">
+   <link rel="stylesheet" href="styles/details.css">
+   <link rel="stylesheet" href="components/navbar.css">
 </head>
 <!-- 顶部导航栏 -->
-<header class="navbar">
-    <div class="navbar-left">
-        <a href="homepage" class="navbar-link">welcome to Shanghai</a>
-    </div>
-    <div class="navbar-right">
-        <a href="aboutme" class="navbar-link">关于我</a>
-        <div class="language-switch">
-            <label for="language">Language:</label>
-            <select id="language">
-                <option value="en">English</option>
-                <option value="zh">中文</option>
-            </select>
-        </div>
-    </div>
-</header>
+<object type="text/html" data="components/navbar.html"></object>
 
 <!-- 正文 -->
 <body>
@@ -29,32 +15,31 @@
         <!-- 左侧边栏 -->
         <div class="sidebar">
             <div class="menu-item" id="section1">一级菜单1</div>
-    <div class="sub-menu" id="sub-section1">
-        <div class="menu-item">二级菜单1-1</div>
-        <div class="menu-item">二级菜单1-2</div>
-    </div>
+            <div class="sub-menu" id="sub-section1">
+                <div class="menu-item">二级菜单1-1</div>
+                <div class="menu-item">二级菜单1-2</div>
+            </div>
 
-    <div class="menu-item" id="section2">一级菜单2</div>
-    <div class="sub-menu" id="sub-section2">
-        <div class="menu-item">二级菜单2-1</div>
-        <div class="menu-item">二级菜单2-2</div>
-    </div>
+            <div class="menu-item" id="section2">一级菜单2</div>
+            <div class="sub-menu" id="sub-section2">
+                <div class="menu-item">二级菜单2-1</div>
+                <div class="menu-item">二级菜单2-2</div>
+            </div>
 
-    <div class="menu-item" id="section3">一级菜单3</div>
-    <div class="sub-menu" id="sub-section3">
-        <div class="menu-item">二级菜单3-1</div>
-        <div class="menu-item">二级菜单3-2</div>
-    </div>
-    <!-- 更多一级菜单... -->
+            <div class="menu-item" id="section3">一级菜单3</div>
+            <div class="sub-menu" id="sub-section3">
+                <div class="menu-item">二级菜单3-1</div>
+                <div class="menu-item">二级菜单3-2</div>
+            </div>
         </div>
-   
+  
 
-    <!-- 右侧内容区域 -->
-    <div class="main-content" id="content">
-    <!-- 初始内容 -->
-    <p>初始内容，选择左侧菜单以查看相应内容。</p>
-    </div>
-
+         <!-- 右侧内容区域 -->
+         <div class="main-content" id="content">
+            <p>初始内容，选择左侧菜单以查看相应内容。</p>
+         </div>
+        </div>
+        
     <script>
         // JavaScript 代码
         document.addEventListener('DOMContentLoaded', function () {
